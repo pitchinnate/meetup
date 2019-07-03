@@ -27,7 +27,7 @@
         </td>
       </template>
     </v-data-table>
-    <delete-confirm name="user" v-model="showDelete"
+    <delete-confirm name="meetup" v-model="showDelete"
                     v-on:confirm="acceptDelete" v-on:cancel="showDelete = false" />
     <v-snackbar v-model="snackbar" color="green" :timeout="3000" top>
       User Deleted Successfully!
