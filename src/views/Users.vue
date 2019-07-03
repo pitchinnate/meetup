@@ -3,9 +3,9 @@
     <v-toolbar flat color="white">
       <v-toolbar-title>Users</v-toolbar-title>
       <v-spacer></v-spacer>
-      <a href="/users/new">
+      <router-link to="/users/new">
         <v-btn color="primary" dark class="mb-2">New User</v-btn>
-      </a>
+      </router-link>
     </v-toolbar>
     <v-data-table
       :headers="headers"
@@ -16,9 +16,9 @@
         <td class="text-xs-left">{{ props.item.email }}</td>
         <td class="text-xs-left">{{ props.item.created_at }}</td>
         <td class="text-md-right">
-          <a :href="'/users/' + props.item.id">
+          <router-link :to="'/users/' + props.item.id">
             <v-icon>edit</v-icon>
-          </a>
+          </router-link>
           <a @click="deleteConfirm(props.item.id)">
             <v-icon >
               delete
